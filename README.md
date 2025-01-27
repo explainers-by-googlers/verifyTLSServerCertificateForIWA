@@ -4,24 +4,19 @@ This proposal is an early design sketch by ChromeOS Commercial to describe the p
 feedback on the proposed solution. It has not been approved to ship in Chrome.
 
 ## Participate
-- https://github.com/explainers-by-googlers/verifyTLSServerCertificateForIWA/issues
-- [Discussion forum]
+https://github.com/explainers-by-googlers/verifyTLSServerCertificateForIWA/issues
 
 ## Introduction
-
-[The "executive summary" or "abstract".
-Explain in a few sentences what the goals of the project are,
-and a brief overview of how the solution works.
-This should be no more than 1-2 paragraphs.]
+This API is currently planned as a part of the [Isolated Web Apps](https://github.com/WICG/isolated-web-apps/blob/main/README.md) proposal 
 
 ## Use cases
 
 The initial motivating use case is to add ability for we apps that use Direct Sockets API to communicate over raw TCP/UDP to
-verify server certificates. Doing so manually is hard and prone to error, because there are many nuances in certificate management: track revoked certificates, invalidate compromised authorities and so on.
+verify server certificates. Doing so manually is hard and error prone, because there are many nuances in certificate management: tracking revoked certificates, invalidating compromised authorities and so on.
 
 ### Alternatives
 
-There's already an extension api for it - `browser.platformKeys.verifyTLSServerCertificate`
+There's already an extension api for it, but it cannot be accessed from IWA - `browser.platformKeys.verifyTLSServerCertificate`
 https://developer.chrome.com/docs/extensions/mv2/reference/platformKeys#method-verifyTLSServerCertificate
 
 ### IDL Definitions
@@ -59,9 +54,6 @@ dictionary VerificationResult {
 ```
 
 ### Examples
-<details>
-<summary>Learn more about using verifyTLSServerCertificate.</summary>
-
 ``` js
 async function readFileAsArrayBuffer(filePath) {
     const response = await fetch(filePath);
@@ -86,4 +78,3 @@ async function readFileAsArrayBuffer(filePath) {
     });
   return JSON.stringify(certResult);
 ```
-</details>
