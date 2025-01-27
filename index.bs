@@ -1,12 +1,12 @@
 <pre class='metadata'>
-Title: The TODO API
-Shortname: todo
+Title: The verifyTLSServerCertificate API
+Shortname: verifyTLSServerCertificate
 Level: None
 Status: w3c/UD
-Repository: explainers-by-googlers/todo-your-repo-name
-URL: https://explainers-by-googlers.github.io/todo-your-repo-name
-Editor: TODO: Your Name, Google https://google.com, TODO@google.com
-Abstract: TODO: A short description of your spec, one or two sentences.
+Repository: explainers-by-googlers/verifyTLSServerCertificateForIWA
+URL: https://explainers-by-googlers.github.io/verifyTLSServerCertificateForIWA
+Editor: Uladzislau Krot, Google https://google.com, vkrot@google.com
+Abstract: This is Isolated Web App api that allows applications that communicate over TCP/UDP to verify server certificates.
 Markup Shorthands: markdown yes, css no
 Complain About: accidental-2119 yes, missing-example-ids yes
 Assume Explicit For: yes
