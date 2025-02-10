@@ -1,6 +1,6 @@
 <pre class='metadata'>
 Title: The verifyTLSServerCertificate API
-Shortname: verifyTLSServerCertificate
+Shortname: verifyTLSServerCertificate for IWA
 Level: None
 Status: w3c/UD
 Repository: explainers-by-googlers/verifyTLSServerCertificateForIWA
@@ -20,7 +20,7 @@ Include Can I Use Panels: yes
 Introduction {#intro}
 =====================
 
-For now, see the [explainer]([REPOSITORYURL]).
+For now, see the [explainer](https://explainers-by-googlers.github.io/verifyTLSServerCertificateForIWA).
 
 See [https://garykac.github.io/procspec/](https://garykac.github.io/procspec/),
 [https://dlaliberte.github.io/bikeshed-intro/index.html](https://dlaliberte.github.io/bikeshed-intro/index.html),
