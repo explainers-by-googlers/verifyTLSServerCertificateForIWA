@@ -19,6 +19,11 @@ Additionally, apps currently cannot verify a certificate against locally install
 There's already a chrome extension api for it, we need the same for IWA. 
 [browser.platformKeys.verifyTLSServerCertificate](https://developer.chrome.com/docs/extensions/mv2/reference/platformKeys#method-verifyTLSServerCertificate)
 
+## Security and Privacy considerations
+
+The certificate by itself is not trusted input hence an attacker can exploit it to find a vulnerability. As a mitigation our implementation should parse certificates using memory safe language or use a sandboxed process.
+On the privacy side, for developers that use this api it is possible to know which certificates are trusted on a user machine. But the same information can be obtained by making fetch requests to HTTPS websites.
+
 ## IDL Definitions
 
 The core of this API will be this method
