@@ -48,6 +48,14 @@ The result of verification is represented by `Promise<undefined>`
 * In case a user has provided an empty certificate chain or one of them is invalid, the Promise will be rejected with `TypeError`.  
 * In other cases of promise rejection, it will have `SecurityError` with a string that indicates errors. The error description is for debugging purposes only and may not include all relevant errors. The errors returned may change in future revisions of this API and are not guaranteed to be forwards or backwards compatible. Example of possible errors: `"Certificate validation failed for the following reason(s): COMMON_NAME_INVALID, AUTHORITY_INVALID"`. Where `“COMMON_NAME_INVALID”` means host is not correct. `“AUTHORITY_INVALID”` means the root certificate is not trusted or missed. 
 
+## Security considerations
+
+The certificate by itself is not trusted input hence an attacker can exploit it to find a vulnerability. As a mitigation an implementation should parse certificates using memory safe language or use a sandboxed process.
+
+## Privacy considerations
+
+On the privacy side, for developers that use this API it is possible to know which certificates are trusted on a user’s machine but the same information can be obtained by making fetch requests to HTTPS websites.
+
 ## Simple usage example
 
 Here we read certificates that are bundled with the app and verify them.
